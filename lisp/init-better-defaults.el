@@ -65,12 +65,12 @@
 
 ;; open directory of current buffer C-x C-j
 
-(define-advice show-paren-function (:around (fn) fix-show-paren-function)
-  "Hightlight enclosing parents."
-  (cond ((looking-at-p "\\s(") (funcall fn))
+(defadvice show-paren-function (around fix-show-paren-function activate)
+  (cond ((looking-at-p "\\s(") ad-do-it)
 	(t (save-excursion
 	     (ignore-errors (backward-up-list))
-	     (funcall fn)))))
+	     ad-do-it)))
+  )
 
 (defun occur-dwim ()
   "Call `occur' with a sane default."
