@@ -23,7 +23,7 @@
 		      ;; --- Minor Mode ---
 
 		      ;; --- Themes ---
-		  
+		      dracula-theme
 		      ;; solarized-theme
 		      ) "Default packages")
 

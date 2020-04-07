@@ -10,5 +10,6 @@
 
 ;(setq initial-frame-alist (quote ((fullscreen, maximized))))
 
+(load-theme 'dracula t)
 
 (provide 'init-ui)
